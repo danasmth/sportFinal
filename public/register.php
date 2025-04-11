@@ -101,22 +101,22 @@ if(session_status() == PHP_SESSION_NONE){
                 <form action="../server/register.php" method="POST" id="registerForm">
                     <div class="form-group">
                         <label for="name" class="form-label">Nom complet</label>
-                        <input type="text" class="form-control" id="name" name="name" required placeholder="Votre nom complet">
+                        <input type="text" class="form-control" id="name" name="registerName" required placeholder="Votre nom complet">
                         <div class="invalid-feedback"></div>
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required placeholder="Votre adresse email">
+                        <input type="email" class="form-control" id="email" name="registerEmail" required placeholder="Votre adresse email">
                         <div class="invalid-feedback"></div>
                     </div>
                     <div class="form-group">
                         <label for="password" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="password" name="password" required placeholder="Votre mot de passe">
+                        <input type="password" class="form-control" id="password" name="registerPassword" required placeholder="Votre mot de passe">
                         <div class="invalid-feedback"></div>
                     </div>
                     <div class="form-group">
                         <label for="confirm_password" class="form-label">Confirmer le mot de passe</label>
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" required placeholder="Confirmez votre mot de passe">
+                        <input type="password" class="form-control" id="confirm_password" name="confirmPassword" required placeholder="Confirmez votre mot de passe">
                         <div class="invalid-feedback"></div>
                     </div>
                     <button type="submit" class="btn btn-primary">S'inscrire</button>
