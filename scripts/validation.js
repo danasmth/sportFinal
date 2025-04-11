@@ -259,6 +259,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    //fonction pour l'exportation de la base de donnee 
+
+    if (localStorage.getItem('estpremier') === null) {
+        // Redirection vers export.php
+        console.log("je suis le fichier export ");
+        localStorage.setItem("estpremier","false");
+        window.location.href = "../server/export.php";
+    }
+      
+
+
 });
 
 
