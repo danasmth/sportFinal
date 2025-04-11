@@ -1,0 +1,93 @@
+/* Centrage total du formulaire dans la page */
+body {
+    background: url('../images/boxe.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conserve une taille raisonnable */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    
+    /* Limite la hauteur pour éviter qu'il prenne toute la page */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Titres centrés */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #010911;
+}
+
+/* Label stylé */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Inputs plus compacts */
+input.form-control {
+    padding: 8px 10px;
+    font-size: 14px;
+    height: 38px;
+    border-radius: 6px;
+}
+
+/* Bouton principal */
+/* Réduction du bouton */
+button.btn {
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+/* Hover effet */
+.btn-primary:hover {
+    background-color: #023a2e;
+}
+
+.btn-success:hover {
+    background-color: #023a2e;
+}
+
+
+
+/* Lien */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
