@@ -90,7 +90,7 @@ INSERT INTO activities (name, description, duration, max_participants, coach, le
         $connexion->exec($sql);
         $connexion= null ; 
         echo "data base est créé et les table et mme inseré";
-        header("Location: ../../index.html");
+        header("Location: ../public/index.php");
         exit();
     }catch(PDOException $e){
         echo $e->getMessage();

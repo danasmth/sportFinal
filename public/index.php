@@ -276,6 +276,9 @@ if(session_status() == PHP_SESSION_NONE){
 
      </div>
   </footer>
+
+  <script src="../scripts/validation.js"></script>
+
     
 </body>
 </html>
