@@ -82,11 +82,6 @@ INSERT INTO activities (name, description, duration, max_participants, coach, le
 
  ";       
 
-
-
-
-
-
         $connexion->exec($sql);
         $connexion= null ; 
         echo "data base est créé et les table et mme inseré";

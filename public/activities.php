@@ -117,7 +117,7 @@ $result = $conn->query($sql);
         if ($result && $result->num_rows > 0) {
             // Afficher chaque activité
             while ($activity = $result->fetch_assoc()) {
-                // Compter le nombre actuel de participants (fonctionnalité optionnelle)
+                // Compter le nombre actuel de participants 
                 $sql_count = "SELECT COUNT(*) as count FROM bookings WHERE activity_id = ?";
                 $stmt_count = $conn->prepare($sql_count);
                 $stmt_count->bind_param("i", $activity['id']);
@@ -130,8 +130,7 @@ $result = $conn->query($sql);
                 // Vérifier si l'activité est complète
                 $is_full = ($current_participants >= $activity['max_participants']);
                 
-                // Choose appropriate icon based on activity name
-                $icon_class = "bi-activity";
+                $icon_class = "bi-activity";  
                 $activity_name_lower = strtolower($activity['name']);
                 
                 if (strpos($activity_name_lower, 'yoga') !== false) {
@@ -218,7 +217,7 @@ $result = $conn->query($sql);
                             </div>
 
                             <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-                                <?php if ($is_full): ?>
+                                <?php if ($is_full): ?>  
                                     <button class="btn btn-secondary w-100" disabled>Complet</button>
                                 <?php else: ?>
                                     <form action="../server/booking_gestion.php" method="POST">

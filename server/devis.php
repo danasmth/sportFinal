@@ -22,11 +22,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $details=isset($_POST['details']) ? htmlspecialchars($_POST['details']) : "non spécifié";
 
 
-    // pour les checkbox
     $objectifs = $_POST['choix'] ?? [];
     $objectifs = is_array($objectifs) ? $objectifs : [$objectifs];
      
-    // La condition est inversée ici, ce qui cause un problème
     if (!empty($objectifs)){
         $objectifs_txt = "";
         foreach ($objectifs as $i => $obj) {
@@ -65,20 +63,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               break;            
         }
 
-        //extraction de nbr de seances
-        //extraire une suite de chiffres dans une chaine de caracteres donné( $nbr_seances)
-        //resultat dans $matches
         preg_match('/\d/',$nbr_seances,$matches);
         $nb=isset($matches[0]) ? intval($matches[0]) : 1;
         $prix_finale=$tarif_base * $nb *4; // estimation pour 1 mois
 
-       
-        
-
         // envoie de mail
 
-        
-        
         if(empty($errors)){
             try {
                 $mail = new PHPMailer(true);
@@ -110,7 +100,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                Programme personalisé: $programme_perso\nDétails : $details\nObjectifs : $objectifs_txt\nDurée du programme : $duree\nNombre de séances/semaine: $nbr_seances\nLieu d'entrainement : $lieu\n💰 Estimation du tarif total : $prix_finale $\n
                                \n\nNous vous remercions de nous faire confiance et restons disponibles pour toute précision.";
                 
-                // Remplacer cette partie dans votre fichier server/devis.php
                 $mail->send();
                 $_SESSION['success_message'] = "Votre demande de devis a été envoyée avec succès! Nous vous contacterons bientôt.";
                 header('Location: ../public/devis.php');
@@ -125,8 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             exit;
         }
     } else {
-        // Correction du chemin de redirection si pas de POST
-        header('Location: ../public/devis.php');
+        header('Location: ../public/devis.php');   
         exit;
     }
 

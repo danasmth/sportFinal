@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activity_id'])) {
     //verifier si l'activité existe 
     $sql_check_activity = "SELECT * FROM activities WHERE id = ?";
     if($stmt_check = $conn->prepare($sql_check_activity)) {
-        $stmt_check->bind_param("i", $activity_id);  // Correction ici: "i" au lieu de ""
+        $stmt_check->bind_param("i", $activity_id);  
         $stmt_check->execute();
         $result_activity = $stmt_check->get_result();
 
@@ -39,13 +39,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['activity_id'])) {
 
             if ($result_booking->num_rows > 0) {
                 $_SESSION['error_message'] = "Vous êtes déjà inscrit à cette activité.";
-                header("Location: ../public/activities.php");  // Correction ici
+                header("Location: ../public/activities.php");  
                 exit;
             }
 
             $stmt_booking->close();
 
-            // Vérifier le nombre de participants actuels (fonctionnalité optionnelle)
+            // Vérifier le nombre de participants actuels 
             $sql_count = "SELECT COUNT(*) as count FROM bookings WHERE activity_id = ?";
             if ($stmt_count = $conn->prepare($sql_count)) {
                  $stmt_count->bind_param("i", $activity_id);

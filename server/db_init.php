@@ -86,9 +86,9 @@ if($row['count'] == 0) {
         ["Cycling", "Cours collectif de cycling (vélo d'appartement nécessaire)", 45, 3, "Amy Taylor", NULL],
         ["Fitness", "Cours collectif de fitness", 45, 5, "Laura Jones", NULL],
         ["Programme Personnalisé", "Coaching individuel avec suivi hebdomadaire", 60, 1, "Laura Marins", NULL]
-    ];
+    ];  
 
-    $stmt = $conn->prepare("INSERT INTO acrivities (name, description, duration, max_participants, coach, level) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO activities (name, description, duration, max_participants, coach, level) VALUES (?, ?, ?, ?, ?, ?)");
     
     foreach($activities as $activity) {
         $stmt->bind_param('ssiiss', $activity[0], $activity[1], $activity[2], $activity[3], $activity[4], $activity[5]);

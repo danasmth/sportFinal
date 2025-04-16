@@ -1,23 +1,23 @@
 /* Styles pour la page de contact */
 .contact-header {
     margin-bottom: 50px;
-    color: #212529; /* Changé de blanc à gris foncé pour la lisibilité */
+    color: #212529; 
 }
 
 .contact-header h1 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #212529; /* Assurez-vous que le titre est visible */
+    color: #212529; 
 }
 
 .contact-header p {
-    color: #212529; /* Assurez-vous que le sous-titre est visible */
+    color: #212529; 
 }
 
 .contact-info-card, .contact-form-card {
     background: #f8f9fa;
-    border-left: 4px solid #ff9d00; /* Couleur moutarde au lieu de rose */
+    border-left: 4px solid #ff9d00; 
     border-radius: 10px;
     padding: 30px;
     height: 100%;
@@ -27,11 +27,11 @@
 .contact-details li {
     font-size: 16px;
     line-height: 1.6;
-    color: #212529; /* Assurez-vous que le texte est visible */
+    color: #212529; 
 }
 
 .contact-details i {
-    color: #ff9d00; /* Couleur moutarde au lieu de rose */
+    color: #ff9d00; 
     width: 20px;
     text-align: center;
 }
@@ -56,7 +56,7 @@
 }
 
 .social-icon:hover {
-    background-color: #ff9d00; /* Couleur moutarde au lieu de rose */
+    background-color: #ff9d00; 
     transform: translateY(-3px);
 }
 
@@ -74,13 +74,13 @@
 }
 
 .form-control:focus {
-    border-color: #ff9d00; /* Couleur moutarde au lieu de rose */
+    border-color: #ff9d00; 
     box-shadow: 0 0 0 0.25rem rgba(255, 157, 0, 0.25);
 }
 
 /* Bouton personnalisé */
 .btn-custom-primary {
-    background-color: #ff9d00; /* Couleur moutarde au lieu de rose */
+    background-color: #ff9d00; 
     border-color: #ff9d00;
     color: #fff;
     font-weight: 600;
@@ -99,7 +99,7 @@
     transform: translateY(-3px);
 }
 
-/* Ajout pour s'assurer que le texte dans main est visible */
+
 main {
     color: #212529;
     background-color: #f8f9fa;

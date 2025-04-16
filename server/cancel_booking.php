@@ -8,7 +8,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
-// Vérifier si l'ID de réservation est fourni
+// Vérifier si l'ID de réservation est fourni    
 if (!isset($_POST['booking_id']) || empty($_POST['booking_id'])) {
     $_SESSION['error_message'] = "Identifiant de réservation manquant.";
     header("Location: ../public/my_booking.php");
